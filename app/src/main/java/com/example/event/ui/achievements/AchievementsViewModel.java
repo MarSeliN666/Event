@@ -1,60 +1,37 @@
 package com.example.event.ui.achievements;
 
+import android.app.AlertDialog;
+import android.view.View;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.event.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class AchievementsViewModel extends ViewModel {
-//
-//    private MutableLiveData<String> mText;
-//
-//    public AchievementsViewModel() {
-//        mText = new MutableLiveData<>();
-//        mText.setValue("Achievements");
-//
-//    }
 
-    class Achievements {
+    private MutableLiveData<String> mText;
+    public List<Person> persons;
 
-        String name;
-        String descroption;
-        int photoId;
 
-        Achievements(String name, String description, int photoId) {
-            this.name = name;
-            this.descroption = description;
-            this.photoId = photoId;
-        }
+    public AchievementsViewModel() {
 
     }
 
-    public List<Achievements> achievements;
+    public void initializeData(){
+        persons = new ArrayList<>();
 
-    // This method creates an ArrayList that has three Achievements objects
+        persons.add(new Person("Emma Wilson", "23 years old", R.mipmap.ic_buddha_round));
+        persons.add(new Person("Lavery Maiss", "25 years old", R.mipmap.ic_buddha_round));
+        persons.add(new Person("Lillie Watts", "35 years old", R.mipmap.ic_buddha_round));
 
-    public void initializeData() {
-
-        achievements = new ArrayList<>();
-
-        achievements.add(new Achievements
-                ("Emma Wilson", "23 years old", R.drawable.ic_launcher_foreground));
-        achievements.add(new Achievements
-                ("Lavery Maiss", "25 years old", R.drawable.ic_launcher_foreground));
-        achievements.add(new Achievements
-                ("Lillie Watts", "35 years old", R.drawable.ic_launcher_foreground));
     }
 
-    private void initializeAdapter(){
-        RVAdapter adapter = new RVAdapter(achievements);
-        //rv.setAdapter(adapter);
-    }
 
-//    public LiveData<String> getText() {
-//        return mText;
-//    }
 }

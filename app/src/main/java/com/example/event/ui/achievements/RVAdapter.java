@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,45 +13,51 @@ import com.example.event.R;
 
 import java.util.List;
 
-public  class RVAdapter extends RecyclerView.Adapter<RVAdapter.AchievementViewHolder>{
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> {
 
-    public static class AchievementViewHolder extends RecyclerView.ViewHolder {
+    public static class PersonViewHolder extends RecyclerView.ViewHolder {
+
         CardView cv;
-        TextView name;
-        TextView description;
-        ImageView photoId;
-        AchievementViewHolder(View itemView) {
+        TextView personName;
+        TextView personAge;
+        ImageView personPhoto;
+
+        PersonViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            name = (TextView)itemView.findViewById(R.id.name);
-            description = (TextView)itemView.findViewById(R.id.description);
-            photoId = (ImageView)itemView.findViewById(R.id.photo);
+            personName = (TextView)itemView.findViewById(R.id.name);
+            personAge = (TextView)itemView.findViewById(R.id.description);
+            personPhoto = (ImageView)itemView.findViewById(R.id.photo);
         }
     }
 
-    List<AchievementsViewModel.Achievements> achievement;
-    RVAdapter(List<AchievementsViewModel.Achievements> persons){
-        this.achievement = achievement;
+    List<Person> persons;
+
+    RVAdapter(List<Person> persons){
+        this.persons = persons;
     }
 
     @Override
-    public AchievementViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).
-                inflate(R.layout.item_achievement, viewGroup, false);
-        AchievementViewHolder achievementViewHolder = new AchievementViewHolder(v);
-        return achievementViewHolder;
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 
     @Override
-    public void onBindViewHolder(AchievementViewHolder personViewHolder, int i) {
-        personViewHolder.name.setText(achievement.get(i).name);
-        personViewHolder.description.setText(achievement.get(i).descroption);
-        personViewHolder.photoId.setImageResource(achievement.get(i).photoId);
+    public PersonViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_achievement, viewGroup, false);
+        PersonViewHolder pvh = new PersonViewHolder(v);
+        return pvh;
     }
 
+    @Override
+    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
+        personViewHolder.personName.setText(persons.get(i).name);
+        personViewHolder.personAge.setText(persons.get(i).age);
+        personViewHolder.personPhoto.setImageResource(persons.get(i).photoId);
+    }
 
     @Override
     public int getItemCount() {
-        return 12;
+        return persons.size();
     }
 }

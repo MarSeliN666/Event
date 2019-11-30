@@ -17,13 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.event.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class AchievementsFragment extends Fragment {
 
     private AchievementsViewModel achievementsViewModel;
-    private List<AchievementsViewModel.Achievements> achievement;
+
     private RecyclerView rv;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -31,36 +32,24 @@ public class AchievementsFragment extends Fragment {
         achievementsViewModel = ViewModelProviders.of(this).get(AchievementsViewModel.class);
         View v = inflater.inflate(R.layout.fragment_achievements, container, false);
 
-        rv = v.findViewById(R.id.rv);
-        rv.setHasFixedSize(true);
+        rv= v.findViewById(R.id.rv);
 
-        LinearLayoutManager llm;
-        llm = new LinearLayoutManager(getContext(rv));
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
-
+        rv.setHasFixedSize(true);
 
         achievementsViewModel.initializeData();
         initializeAdapter();
 
 
-//        achievementsViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//
-//
-//            }
-//        });
-
         return v;
     }
 
-    private Context getContext(RecyclerView rv) {
-        return null;
-    }
-
     private void initializeAdapter(){
-        RVAdapter adapter = new RVAdapter(achievement);
+        final List<Person> persons = achievementsViewModel.persons;
+        RVAdapter adapter = new RVAdapter(persons);
         rv.setAdapter(adapter);
     }
+
 
 }
