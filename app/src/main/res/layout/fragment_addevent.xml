@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,8 +25,9 @@
         android:layout_width="0dp"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#000000"
         android:fontFamily="@font/viga"
         android:gravity="center"
         android:hint="@string/title_your_event"
@@ -37,28 +39,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:layout_marginTop="64dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_snog"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/viga"
         android:gravity="start"
         android:text="@string/select_number_of_guests"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/TitleOfEvent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+        app:layout_constraintTop_toBottomOf="@+id/TitleOfEvent" />
 
     <TextView
         android:id="@+id/tv_sv"
@@ -75,7 +67,7 @@
 
     <TextView
         android:id="@+id/tv_sg"
-        android:layout_width="148dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/viga"
         android:gravity="start"
@@ -84,26 +76,25 @@
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_store"
         app:layout_constraintEnd_toEndOf="@+id/tv_sv"
-        app:layout_constraintStart_toStartOf="@+id/tv_sd" />
+        app:layout_constraintStart_toStartOf="@+id/tv_sv" />
 
     <EditText
         android:id="@+id/et_number_of_guests"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:backgroundTint="@android:color/black"
         android:fontFamily="@font/viga"
         android:gravity="center"
         android:hint="@string/_13"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_snog"
         app:layout_constraintEnd_toEndOf="@+id/TitleOfEvent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_snog"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toEndOf="@+id/tv_snog" />
 
     <Button
         android:id="@+id/btn_date"

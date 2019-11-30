@@ -9,17 +9,17 @@ import com.example.event.R;
 
 public class CardViewActivity extends Activity {
 
-    TextView personName;
-    TextView personAge;
-    ImageView personPhoto;
+    TextView achievementTitle;
+    TextView achievementDescription;
+    ImageView achievementIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.item_achievement);
-        personName = (TextView)findViewById(R.id.name);
-        personAge = (TextView)findViewById(R.id.description);
-        personPhoto = (ImageView)findViewById(R.id.photo);
+        setContentView(R.layout.card_achievement);
+        achievementTitle = (TextView)findViewById(R.id.achievement_titile);
+        achievementDescription = (TextView)findViewById(R.id.achievement_description);
+        achievementIcon = (ImageView)findViewById(R.id.achievement_icon);
     }
 }
