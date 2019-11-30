@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Event</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_addevent">AddEvent</string>
+    <string name="menu_myevents">MyEvents</string>
+    <string name="menu_history">History</string>
+    <string name="menu_goods">Goods</string>
+    <string name="menu_places">Places</string>
+    <string name="menu_achievements">Achievements</string>
+    <string name="title_your_event">Title your event</string>
+    <string name="additional">Additional</string>
+    <string name="select_date">Select date</string>
+    <string name="select_number_of_guests">Select number of guests</string>
+    <string name="select_place">Select place</string>
+    <string name="select_goods">Select goods</string>
+    <string name="_13">13</string>
+    <string name="_13_12_11_11_12_13">13.12.11-11.12.13</string>
+    <string name="st_polova_13">st. Polova 13</string>
+    <string name="store">STORE</string>
+    <string name="confifm_the_order">CONFIFM THE ORDER</string>
+    <string name="event">EVENT</string>
+    <string name="description">Description</string>
+    <string name="name">Name</string>
+</resources>
