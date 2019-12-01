@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_addevent,
                 R.id.nav_myevents,
                 R.id.nav_history,
-                R.id.nav_goods,
+                R.id.nav_products,
                 R.id.nav_places,
                 R.id.nav_achievements)
                 .setDrawerLayout(drawer)

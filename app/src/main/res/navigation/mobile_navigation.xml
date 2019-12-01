@@ -24,10 +24,10 @@
         tools:layout="@layout/fragment_history"/>
 
     <fragment
-        android:id="@+id/nav_goods"
+        android:id="@+id/nav_products"
         android:name="com.example.event.ui.products.ProductFragment"
-        android:label="@string/menu_goods"
-        tools:layout="@layout/fragment_goods"/>
+        android:label="@string/menu_products"
+        tools:layout="@layout/fragment_products" />
 
     <fragment
         android:id="@+id/nav_places"

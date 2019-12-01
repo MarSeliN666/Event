@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="13dp"
-    android:backgroundTint="@android:color/black">
+    android:backgroundTint="@android:color/transparent"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:layout_marginStart="8dp"
             android:fontFamily="@font/viga"
             android:text="@string/name"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/achievement_icon"
@@ -34,7 +35,7 @@
             android:layout_marginStart="8dp"
             android:fontFamily="@font/oxygen"
             android:text="@string/description"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/achievement_icon"
             app:layout_constraintEnd_toEndOf="parent"
