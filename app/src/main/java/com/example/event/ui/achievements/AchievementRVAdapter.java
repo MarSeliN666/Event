@@ -13,7 +13,7 @@ import com.example.event.R;
 
 import java.util.List;
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.AchevementViewHolder> {
+public class AchievementRVAdapter extends RecyclerView.Adapter<AchievementRVAdapter.AchevementViewHolder> {
 
     public static class AchevementViewHolder extends RecyclerView.ViewHolder {
 
@@ -24,15 +24,15 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.AchevementViewHold
 
         AchevementViewHolder(View itemView) {
             super(itemView);
-            cv = (CardView)itemView.findViewById(R.id.card_achievement);
-            achievementTitle = (TextView)itemView.findViewById(R.id.achievement_titile);
-            achievementDescription = (TextView)itemView.findViewById(R.id.achievement_description);
+            cv = (CardView)itemView.findViewById(R.id.card_product);
+            achievementTitle = (TextView)itemView.findViewById(R.id.product_titile);
+            achievementDescription = (TextView)itemView.findViewById(R.id.product_description);
             achievenemtIcon = (ImageView)itemView.findViewById(R.id.achievement_icon);
         }
     }
 
     List<Achievement> achievement;
-    RVAdapter(List<Achievement> achievements){
+    AchievementRVAdapter(List<Achievement> achievements){
         this.achievement = achievements;
     }
 

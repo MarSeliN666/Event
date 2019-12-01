@@ -1,6 +1,7 @@
 package com.example.event.ui.achievements;
 
 class Achievement {
+
     String name;
     String description;
     int photoId;

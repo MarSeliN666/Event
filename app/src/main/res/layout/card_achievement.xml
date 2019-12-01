@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_achievement"
+    android:id="@+id/card_product"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="13dp"
@@ -13,7 +13,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/achievement_titile"
+            android:id="@+id/product_titile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -27,10 +27,10 @@
             app:layout_constraintTop_toTopOf="@+id/achievement_icon" />
 
         <TextView
-            android:id="@+id/achievement_description"
+            android:id="@+id/product_description"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_below="@+id/achievement_titile"
+            android:layout_below="@+id/product_titile"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/oxygen"
             android:text="@string/description"
@@ -39,7 +39,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/achievement_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/achievement_icon"
-            app:layout_constraintTop_toBottomOf="@+id/achievement_titile" />
+            app:layout_constraintTop_toBottomOf="@+id/product_titile" />
 
         <ImageView
             android:id="@+id/achievement_icon"

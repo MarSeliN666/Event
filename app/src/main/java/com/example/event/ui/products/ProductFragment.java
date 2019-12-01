@@ -1,4 +1,4 @@
-package com.example.event.ui.achievements;
+package com.example.event.ui.products;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,24 +15,22 @@ import com.example.event.R;
 
 import java.util.List;
 
+public class ProductFragment extends Fragment {
 
-public class AchievementsFragment extends Fragment {
-
-    private AchievementsViewModel achievementsViewModel;
+    private ProductViewModel productViewModel;
     private RecyclerView rv;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        achievementsViewModel = ViewModelProviders.of(this).get(AchievementsViewModel.class);
-        View v = inflater.inflate(R.layout.fragment_achievements, container, false);
+        productViewModel = ViewModelProviders.of(this).get(ProductViewModel.class);
+        View v = inflater.inflate(R.layout.fragment_products, container, false);
 
-        rv= v.findViewById(R.id.rv_achievements);
+        rv= v.findViewById(R.id.rv_products);
 
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
-        rv.setHasFixedSize(true);
 
-        achievementsViewModel.initializeData();
+        productViewModel.initializeData();
         initializeAdapter();
 
 
@@ -40,8 +38,8 @@ public class AchievementsFragment extends Fragment {
     }
 
     private void initializeAdapter(){
-        List<Achievement> achievements = achievementsViewModel.achievements;
-        AchievementRVAdapter adapter = new AchievementRVAdapter(achievements);
+        List<Products> productsList = productViewModel.productsList;
+        ProductRVAdapter adapter = new ProductRVAdapter(productsList);
         rv.setAdapter(adapter);
     }
 

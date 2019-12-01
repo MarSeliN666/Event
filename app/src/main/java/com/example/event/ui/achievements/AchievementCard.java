@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.example.event.R;
 
-public class CardViewActivity extends Activity {
+public class AchievementCard extends Activity {
 
     TextView achievementTitle;
     TextView achievementDescription;
@@ -18,8 +18,8 @@ public class CardViewActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.card_achievement);
-        achievementTitle = (TextView)findViewById(R.id.achievement_titile);
-        achievementDescription = (TextView)findViewById(R.id.achievement_description);
+        achievementTitle = (TextView)findViewById(R.id.product_titile);
+        achievementDescription = (TextView)findViewById(R.id.product_description);
         achievementIcon = (ImageView)findViewById(R.id.achievement_icon);
     }
 }
