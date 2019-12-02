@@ -20,14 +20,8 @@ public class MyEventsFragment extends Fragment {
             ViewGroup container, Bundle savedInstanceState) {
         myEventsViewModel =
                 ViewModelProviders.of(this).get(MyEventsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_myevents, container, false);
-        final TextView textView = root.findViewById(R.id.text_myevents);
-        myEventsViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        View root = inflater.inflate(R.layout.card_myevent, container, false);
+
         return root;
     }
 }
