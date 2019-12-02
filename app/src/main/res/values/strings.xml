@@ -27,4 +27,5 @@
     <string name="event">EVENT</string>
     <string name="description">Description</string>
     <string name="name">Name</string>
+    <string name="timeFormat">timeFormat</string>
 </resources>
