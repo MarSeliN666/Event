@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_product"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:layout_margin="13dp"
-    android:backgroundTint="@android:color/transparent"
-    >
+    android:backgroundTint="@android:color/transparent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/viga"
             android:text="@string/name"
             android:textColor="@android:color/black"
@@ -32,24 +33,25 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_below="@+id/product_titile"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/oxygen"
             android:text="@string/description"
             android:textColor="@android:color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/achievement_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/achievement_icon"
+            app:layout_constraintStart_toStartOf="@+id/product_titile"
             app:layout_constraintTop_toBottomOf="@+id/product_titile" />
 
         <ImageView
             android:id="@+id/achievement_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_buddha_round"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/ic_hot" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -20,14 +20,8 @@ public class PlacesFragment extends Fragment {
             ViewGroup container, Bundle savedInstanceState) {
         placesViewModel =
                 ViewModelProviders.of(this).get(PlacesViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_places, container, false);
-        final TextView textView = root.findViewById(R.id.text_places);
-        placesViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        View root = inflater.inflate(R.layout.card_places, container, false);
+
         return root;
     }
 }
