@@ -6,14 +6,5 @@ import androidx.lifecycle.ViewModel;
 
 public class HistoryViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
 
-    public HistoryViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("The History is empty yet");
-    }
-
-    public LiveData<String> getText() {
-        return mText;
-    }
 }
